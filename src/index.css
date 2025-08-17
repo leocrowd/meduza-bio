@@ -1,0 +1,53 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove margens e preenchimentos de todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define uma altura de 100% para o corpo da página e o elemento raiz */
+html, body {
+  height: 100%;
+}
+
+/* Melhora a legibilidade do texto e define uma altura de linha padrão */
+body {
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+/* Remove os estilos de lista padrão */
+ol, ul {
+  list-style: none;
+}
+
+/* Garante que imagens e outros elementos de mídia sejam responsivos */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Garante que elementos de formulário herdem as fontes */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Remove sublinhados de links */
+a {
+  text-decoration: none;
+}
