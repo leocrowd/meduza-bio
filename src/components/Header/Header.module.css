@@ -1,5 +1,5 @@
 .header {
-    height: 300px;
+    height: 380px;
     width: 100%;
     background-image: url('https://i.pinimg.com/originals/8f/69/84/8f698481fb0da708d739110ec6590a48.jpg');
     background-size: cover;
@@ -16,10 +16,3 @@
     padding-block: 5px;
 }
 
-.info h1 {
-    font-size: 1.5rem;
-}
-
-.info p {
-    font-size: 14px;
-}

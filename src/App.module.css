@@ -66,9 +66,9 @@ ul li:last-child::after {
 }
 
 .footer {
-  font-size: 12px;
+  font-size: 15px;
   border-top: 1px solid rgba(255, 255, 255, 0.145);
-  margin: 30px auto 5px;
+  margin: 30px auto 30px;
   display: flex;
   justify-content: center;
   width: 100%;
