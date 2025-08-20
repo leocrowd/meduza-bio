@@ -39,7 +39,7 @@ export default function App() {
       />
       <Card
         title={`Portfólio`}
-        text={`Confira os trabalhos já realizados e inspire-se para a sua próxima tattoo no Instagram.`}
+        text={`Explore os trabalhos já realizados, desde tatuagens até peças exclusivas como roupas, objetos e acessórios.`}
         link={`https://www.instagram.com/tattooraizaborda/?igsh=azg1aG5ldm1uZzd2#`}
         linkTitle={`Ver Portfólio`}
       />

@@ -1,13 +1,23 @@
 .header {
-    height: 380px;
+    height: 400px;
     width: 100%;
-    background-image: url('https://i.pinimg.com/originals/8f/69/84/8f698481fb0da708d739110ec6590a48.jpg');
-    background-size: cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar {
+    margin: 20px;
+    padding: 0;
+    width: 350px;
+    height: 100%;
+    background-image: url('../../assets/logo.png');
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-
-    display: flex;
 }
+
 .info {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.724);
@@ -15,4 +25,3 @@
     width: 100%;
     padding-block: 5px;
 }
-
