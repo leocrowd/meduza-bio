@@ -5,9 +5,9 @@ export default function ShareBtn() {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: "Formulário de Tatuagem",
-          text: "Preencha seu formulário aqui:",
-          url: "https://meuapp.com/formulario"
+          title: "Meduza Lab | Arte e Tattoo",
+          text: "Informações",
+          url: "https://meduza.nopx.com.br"
         });
         console.log("Compartilhado com sucesso!");
       } catch (error) {
