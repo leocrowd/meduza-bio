@@ -6,7 +6,7 @@
 }
 
 .container {
-  max-width: 350px;
+  max-width: 450px;
   margin: 0 auto;
   background-color: rgb(9, 9, 9);
   display: flex;
@@ -14,11 +14,13 @@
   align-items: center;
   justify-content: center;
   height: 100%;
+  background: linear-gradient(180deg, #000000, #141414, #1f1f1f);
+
 }
 
 .popupOverlay {
   position: fixed;
-  inset: 0; 
+  inset: 0;
   background: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
@@ -71,5 +73,5 @@ ul li:last-child::after {
   justify-content: center;
   width: 100%;
   padding-top: 5px;
-  
+
 }

@@ -4,17 +4,26 @@ import Header from './components/Header'
 import Card from './components/Card'
 import ShareBtn from './components/ShareBtn';
 
-
 export default function App() {
-  const [showPopup, setShowPopup] = useState(false);
+  const [showPopupPos, setShowPopupPos] = useState(false);
+  const [showPopupPre, setShowPopupPre] = useState(false);
 
-  const cuidados = [
+  const cuidadosPos = [
     "Lave a tattoo com água fria e sabão neutro.",
     "Aplique a pomada recomendada pelo tatuador.",
     "Evite sol e piscina durante a cicatrização.",
     "Não coce nem arranque as casquinhas.",
     "Use roupas leves para não abafar a tattoo.",
     "Hidrate a pele após a cicatrização."
+  ];
+
+  const cuidadosPre = [
+    "Durma bem na noite anterior ao procedimento.",
+    "Alimente-se de forma saudável antes da sessão.",
+    "Evite bebidas alcoólicas 24h antes da tattoo.",
+    "Não tome sol excessivo no local que será tatuado.",
+    "Hidrate bem a pele nos dias que antecedem.",
+    "Não use cremes ou óleos no dia da sessão."
   ];
 
   return (
@@ -34,23 +43,47 @@ export default function App() {
         link={`https://www.instagram.com/tattooraizaborda/?igsh=azg1aG5ldm1uZzd2#`}
         linkTitle={`Ver Portfólio`}
       />
+      {/* Card Pré Tattoo */}
       <Card
-        title={`Cuidados com sua Tattoo`}
+        title={`Cuidados Pré Tattoo`}
+        text={`Confira os cuidados importantes antes de fazer sua tatuagem`}
+        linkTitle={`Veja aqui`}
+        onClick={() => setShowPopupPre(true)}
+      />
+      {/* Card Pós Tattoo */}
+      <Card
+        title={`Cuidados Pós Tattoo`}
         text={`Confira os cuidados que você precisa ter com a sua tatuagem nova`}
         linkTitle={`Veja aqui`}
-        onClick={() => setShowPopup(true)}
+        onClick={() => setShowPopupPos(true)}
       />
 
-      {showPopup && (
+      {/* Popup Pré Tattoo */}
+      {showPopupPre && (
+        <div className={styles.popupOverlay}>
+          <div className={styles.popupContent}>
+            <h2>Cuidados Pré-Tattoo</h2>
+            <ul>
+              {cuidadosPre.map((cuidado, i) => (
+                <li key={i}>{cuidado}</li>
+              ))}
+            </ul>
+            <button className={styles.closeBtn} onClick={() => setShowPopupPre(false)}>Fechar</button>
+          </div>
+        </div>
+      )}
+
+      {/* Popup Pós Tattoo */}
+      {showPopupPos && (
         <div className={styles.popupOverlay}>
           <div className={styles.popupContent}>
             <h2>Cuidados Pós-Tattoo</h2>
             <ul>
-              {cuidados.map((cuidado, i) => (
+              {cuidadosPos.map((cuidado, i) => (
                 <li key={i}>{cuidado}</li>
               ))}
             </ul>
-            <button className={styles.closeBtn} onClick={() => setShowPopup(false)}>Fechar</button>
+            <button className={styles.closeBtn} onClick={() => setShowPopupPos(false)}>Fechar</button>
           </div>
         </div>
       )}
@@ -60,10 +93,6 @@ export default function App() {
           Desevolvido por <a href="https://bio.nopx.com.br/">NOPX</a>.
         </small>
       </div>
-      
-
     </div>
   )
 }
-
-
